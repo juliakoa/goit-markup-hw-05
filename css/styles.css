@@ -365,8 +365,42 @@ header {
   padding-bottom: 20px;
 }
 
+.project-window {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(33, 150, 243, 0.9);
+  width: 100%;
+  height: 294px;
+  padding-top: 49px;
+  transform: translateY(-100%);
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+}
+
+.project-overlay > p {
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  text-align: left;
+  margin-left: 24px;
+}
+
 .project_card img {
   width: 100%;
+}
+
+.project_card:hover .project-window,
+.project_card:focus .project-window {
+  transform: translateY(0);
 }
 
 .project_card:hover,
