@@ -79,6 +79,22 @@ header {
   color: var(--font-color);
 }
 
+.navigation_item.is-active {
+  color: var(--action-color);
+  position: relative;
+}
+
+.navigation_item.is-active::after {
+  position: absolute;
+  top: 44.41px;
+  left: 0;
+  content: "";
+  height: 4px;
+  width: 100%;
+  border-radius: 2px;
+  background: var(--action-color);
+}
+
 .contact-header {
   display: flex;
   align-content: center;
