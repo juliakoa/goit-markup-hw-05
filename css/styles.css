@@ -399,8 +399,8 @@ header {
   width: 100%;
 }
 
-.project_card:hover .project-window,
-.project_card:focus .project-window {
+.project_card:hover .project-overlay,
+.project_card:focus .project-overlay {
   transform: translateY(0);
 }
 
@@ -529,13 +529,13 @@ footer {
   top: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
   height: 581px;
   width: 528px;
   border-radius: 4px;
@@ -556,6 +556,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .is-hidden {
